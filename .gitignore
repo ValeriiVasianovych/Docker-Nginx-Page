@@ -1,0 +1,8 @@
+# Don't add .parcel-cache to git
+/.parcel-cache/
+
+# Don't add dist to git
+/dist/
+
+# Don't add node_modules to git
+/node_modules/

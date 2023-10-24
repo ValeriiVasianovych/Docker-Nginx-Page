@@ -1,0 +1,22 @@
+{
+   "name": "ifBored-app",
+   "version": "1.0.0",
+   "description": "frontend-app",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "parcel ./src/index.html",
+      "build": "parcel build ./src/index.html"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "parcel": "^2.5.0",
+      "postcss": "^8.4.13",
+      "posthtml-include": "^1.7.4",
+      "tailwindcss": "^3.0.24"
+   },
+   "dependencies": {
+      "@parcel/transformer-sass": "^2.5.0"
+   }
+}

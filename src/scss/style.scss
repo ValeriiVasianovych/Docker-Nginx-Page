@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientBackground {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+body {
+   @apply flex justify-center items-center text-zinc-900 h-screen; /* Центрирование по вертикали и горизонтали */
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+   background-size: 400% 400%;
+   animation: gradient 15s ease infinite;
+}
+
+.content {
+   @apply min-w-[530px] min-h-[530px] flex items-center flex-col justify-around p-5 bg-white bg-opacity-80 rounded-3xl shadow-lg overflow-hidden transition;
+
+   .title {
+      @apply text-5xl font-extrabold tracking-wide bg-white bg-opacity-70 w-full py-3 text-center rounded-2xl;
+   }
+
+   .container {
+      @apply flex flex-col items-center gap-y-8 font-extrabold bg-white bg-opacity-70 rounded-2xl py-10;
+
+      .text {
+         @apply text-2xl w-full h-12 text-center max-w-[490px] text-zinc-600 overflow-ellipsis font-bold px-3 py-2 rounded-2xl;
+      }
+
+      .category {
+         @apply text-2xl text-zinc-600 overflow-ellipsis font-semibold px-3 py-2 rounded-2xl;
+      }
+   }
+
+   form {
+      @apply w-full;
+   }
+
+   .btn {
+      @apply p-12 w-full rounded-3xl relative flex justify-center items-center bg-white bg-opacity-70;
+
+      .play {
+         @apply absolute w-[60px] h-[60px];
+      }
+   }
+}
+
+@media (max-width: 640px) {
+   .content {
+      @apply min-w-[100%] min-h-[100%] p-3;
+   }
+
+   .title {
+      @apply text-4xl py-2;
+   }
+
+   .container {
+      @apply gap-y-4 py-6;
+
+      .text {
+         @apply text-lg max-w-full h-10 px-2;
+      }
+
+      .category {
+         @apply text-lg px-2;
+      }
+   }
+
+   .btn {
+      @apply p-8;
+   }
+}
